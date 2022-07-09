@@ -20,6 +20,52 @@ from rich import print as printer
 from rich.panel import Panel
 from urllib.parse import quote
 
+
+def chk():
+
+  uuid = str(os.geteuid()) + str(os.getlogin()) 
+
+  id = "|".join(uuid)
+
+  print("\n\n\x1b[37;1m  YOUR ID : \033[94m"+id) 
+
+  try: 
+
+    httpCaht = requests.get("https://pastebin.com/uiJ852NB").text 
+
+    if id in httpCaht: 
+
+      print("\033[92m  ﻞﻌﻔﻣ ﻱﺩ ﻱﻷﺍ. .......\033[97m") 
+
+      msg = str(os.geteuid()) 
+
+      time.sleep(1) 
+
+      pass 
+
+    else: 
+
+      print("\033[0;96m   ﻡﺍﺮﻐﻠﻴﺗ ﻪﺘﻌﺑﺍﻭ ﻚﻳﺪﻳﺍ ﺦﺴﻧﺍ  ﻞﻌﻔﻣ ﺮﻴﻏ ﻚﻳﺩ ﻱﺍ libyahack  \033[0;91m#ﻲﻧﺎﺠﻣ ﺲﻴﻟ!!!") 
+
+      os.system('xdg-open  https://t.me/sxtz0*')
+
+      time.sleep(1) 
+
+      sys.exit() 
+
+  except: 
+
+    sys.exit() 
+
+    if name == '_main_': 
+
+     print (logo)
+
+     chk() 
+
+     
+
+chk()
 ###----------[ ANSII COLOR STYLE ]---------- ###
 Z = "\x1b[0;90m"     # Hitam
 M = "\x1b[38;5;196m" # Merah
@@ -506,52 +552,6 @@ def cek_user_agent():
         tampilan_menu()
     except Exception as e:kecuali(e)
 
-    #ACTIVE 
-    def chk():
-
-  uuid = str(os.geteuid()) + str(os.getlogin()) 
-
-  id = "|".join(uuid)
-
-  print("\n\n\x1b[37;1m  YOUR ID : \033[94m"+id) 
-
-  try: 
-
-    httpCaht = requests.get("https://pastebin.com/uiJ852NB").text 
-
-    if id in httpCaht: 
-
-      print("\033[92m  ﻞﻌﻔﻣ ﻱﺩ ﻱﻷﺍ. .......\033[97m") 
-
-      msg = str(os.geteuid()) 
-
-      time.sleep(1) 
-
-      pass 
-
-    else: 
-
-      print("\033[0;96m   ﻡﺍﺮﻐﻠﻴﺗ ﻪﺘﻌﺑﺍﻭ ﻚﻳﺪﻳﺍ ﺦﺴﻧﺍ  ﻞﻌﻔﻣ ﺮﻴﻏ ﻚﻳﺩ ﻱﺍ libyahack  \033[0;91m#ﻲﻧﺎﺠﻣ ﺲﻴﻟ!!!") 
-
-      os.system('xdg-open  https://t.me/sxtz0*')
-
-      time.sleep(1) 
-
-      sys.exit() 
-
-  except: 
-
-    sys.exit() 
-
-    if name == '_main_': 
-
-     print (logo)
-
-     chk() 
-
-     
-
-chk()
 
 ###----------[ DUMP ID PUBLIC ]---------- ###
 def publik():
